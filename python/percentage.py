@@ -26,11 +26,10 @@ def cosine_sim(text1, text2):
         sol = random.randint(85, 100)
         sol/=100
     return (sol * 100)//1
-def findPertentage(title, keywords,articleSummary, nlpSummary):
-    print(cosine_sim('a little bird', 'a little bird'))
-    print(cosine_sim('a little bird', 'a little bird chirps'))
-    print(cosine_sim('a little bird', 'a big dog barks'))
+def findPercentage(title, keywords,articleSummary, nlpSummary):
+    # print("percentage file")
     print("summary for newspaper>", cosine_sim(title,articleSummary))
     print("keywords>", cosine_sim(title, ' '.join(keywords)))
     print("nlp summary>", cosine_sim(title, nlpSummary))
+    return [cosine_sim(title,articleSummary), cosine_sim(title, ' '.join(keywords)), cosine_sim(title, nlpSummary)]
     
