@@ -1,0 +1,8 @@
+['pot', 'laws', 'states', 'national', 'law', 'latest', 'wage', 'drones', 'guns', 'family', 'state', 'leave', 'minimum', 'obamacare']
+<<<<<< Oregon: Family leave in Oregon has been expanded to allow eligible employees two weeks of paid leave to handle the death of a family member.
+Arkansas: The state becomes the latest state requiring voters show a picture ID at the voting booth.
+Minimum wage and former felon employmentWorkers in 13 states and four cities will see increases to the minimum wage.
+New Jersey residents voted to raise the state’s minimum wage by $1 to $8.25 per hour.
+California is also raising its minimum wage to $9 per hour, but workers must wait until July to see the addition.
+>>>>>> New Year, new laws: Obamacare, pot, guns and drones
+Some 40,000 measures taking effect range from sweeping, national mandates under Obamacare to marijuana legalization in Colorado, drone prohibition in Illinois and transgender protections in California.
