@@ -2,7 +2,7 @@
 from flask import Flask, request
 from newspaper2 import getSummary
 
-import percentage
+from percentage import findPercentage
 
 app = Flask(__name__)
 
@@ -13,6 +13,6 @@ def index():
 
     url = request.args.get('query')
     title, keywords, articleSummary, nlpSummary = getSummary(url)
-    sol = percentage.findPercentage(title, keywords, articleSummary, nlpSummary)
+    sol = findPercentage(title, keywords, articleSummary, nlpSummary)
     sol = [str(i)+ "%" for i in sol]
     return ' '.join(sol) + " similarity"
