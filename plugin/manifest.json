@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Click Bait Verifier",
+    "description": "This extension shows if an article is a click bait or not!",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "scripts": "url.js"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}
