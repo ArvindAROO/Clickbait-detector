@@ -26,18 +26,7 @@ def cosine_sim(text1, text2):
         sol = random.randint(85, 100)
         sol/=100
     return (sol * 100)//1
-def main(title, keywords,articleSummary, nlpSummary):
-    
-
-
-    b = """Verstappen called Hamilton a "stupid idiot" over the team radio after an incident in which the two raced side by side down the pit straight.
-Verstappen then gave Hamilton a middle-finger salute as they accelerated out of the corner.
-Hamilton was third, his best lap deleted, while Verstappen was eighth.
-The incident between Hamilton and Verstappen happened when Hamilton passed the Red Bull going into the final corner.
-The television cameras caught only the very end of a situation that had begun earlier in the lap when Verstappen passed Hamilton."""
-    c = ['second', 'verstappen', 'hamilton', 'frustrated', 'lap', 'sergio', 'lewis', 'set', 'practice', 'gp', 'max', 'perez', 'red', 'bottas', 'fastest', 'track', 'session']
-    d = """
-    New Jersey residents voted to raise the state’s minimum wage by $1 to $8.25 per hour."""
+def findPertentage(title, keywords,articleSummary, nlpSummary):
     print(cosine_sim('a little bird', 'a little bird'))
     print(cosine_sim('a little bird', 'a little bird chirps'))
     print(cosine_sim('a little bird', 'a big dog barks'))
