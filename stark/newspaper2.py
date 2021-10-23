@@ -30,5 +30,5 @@ def newspaper(url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-
     # print(">>>>>>", article.title)
 
 
-    summary_gen = summarize(text, ratio=0.05)
-    return summary_gen
+    summary_gen = summarize(text, ratio=0.075)
+    return article.title, article.keywords, article.summary, summary_gen
