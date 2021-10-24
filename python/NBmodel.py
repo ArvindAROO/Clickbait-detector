@@ -51,8 +51,6 @@ def remove_punctuations(lst):
 
 test_x=test_x.apply(remove_punctuations) 
 
-
-
 def remove_stopwords(lst):
     stop=stopwords.words('english')
     new_lst=[]
@@ -85,10 +83,12 @@ print(test_1)
 test_arr=test_1.toarray()
 
 print(test_arr)
+
+
 import pickle
 f = open('my_classifier.pickle', 'rb')
 NB_MN = pickle.load(f)
 f.close()
 
-pred=NB_MN.predict(test_arr)
+pred = NB_MN.predict(test_arr)
 print(pred)

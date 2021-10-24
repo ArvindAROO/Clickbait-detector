@@ -20,11 +20,24 @@ cb_data = pd.read_csv("clickbait_data.csv")
 
 x=cb_data.headline
 y=cb_data.clickbait
-train_x,test_x,train_y,test_y=train_test_split(x,y,test_size=0.25,random_state=2)
+
+
+
+train_x, test_x, train_y, test_y = train_test_split(x, y, test_size=0.00003125, random_state=2)
+
+# test_x = cb_data.iloc[0, 0]
+# test_y = cb_data.iloc[0, 1]
+
+# train_x = cb_data.iloc[1:, 0]
+# train_y = cb_data.iloc[1:, 1]
+
+# print(type(train_x), type(train_x[1]))
+# print(test_x, train_x[1])
 
 def tokenization(text):
     lst=text.split()
     return lst
+
 train_x=train_x.apply(tokenization)
 test_x=test_x.apply(tokenization)
 
@@ -89,13 +102,13 @@ test_1=tfidf.transform(test_x)
 
 
 # train_arr=train_1.toarray()
-# test_arr=test_1.toarray()
+test_arr=test_1.toarray()
 
 NB_MN=MultinomialNB()
 
 NB_MN.fit(train_1,train_y)
-pred=NB_MN.predict(test_1)
-# print(test_1)
+pred=NB_MN.predict(test_arr)
+print(test_arr)
 print('first 20 actual labels: ',test_y.tolist()[:20])
 print('first 20 predicted labels: ',pred.tolist()[:20])
 
