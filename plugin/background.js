@@ -1,4 +1,8 @@
-
+chrome.browserAction.setIcon({
+    path: {
+        128: "icon.png"
+    }
+});
 function hello() {
     chrome.tabs.query({
         active: true,
@@ -17,6 +21,7 @@ function hello() {
                 }
             }
         };
+        
         //the request format will be "http://127.0.0.1:5000/url?query=https://example.com"
         // where query is the url to be checked
         var xhr = new XMLHttpRequest();
@@ -28,4 +33,4 @@ function hello() {
     
 }
   
-document.getElementById('clickme').addEventListener('click', hello); // activate only on click
+document.getElementById('button').addEventListener('click', hello); // activate only on click
