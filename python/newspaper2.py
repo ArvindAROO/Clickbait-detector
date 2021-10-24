@@ -27,5 +27,5 @@ def getSummary(url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare
     # print(">>>>>>", article.title)
 
 
-    summary_gen = summarize(text, ratio=0.075)
+    summary_gen = summarize(text, ratio=0.1)
     return article.title, article.keywords, article.summary, summary_gen

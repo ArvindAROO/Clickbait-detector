@@ -1,5 +1,6 @@
 # flask app
 from flask import Flask, request
+from sklearn.base import is_classifier
 from newspaper2 import getSummary
 
 from percentage import findPercentage
@@ -12,13 +13,22 @@ def index():
     try:
 
         url = request.args.get('query')
+        isClickBait = False
         title, keywords, articleSummary, nlpSummary = getSummary(url)
-        sol = findPercentage(title, keywords, articleSummary, nlpSummary)
-        if any( sol[i] < 50 for i in range(len(sol))):
-            verdict = "The chances of this being a clickbait are high"
+        Keywords, articlePercent, nlpPercent = findPercentage(title, keywords, articleSummary, nlpSummary)
+        Summary = (articlePercent + nlpPercent)/2
+        sol = [Keywords,Summary]
+        if nlpPercent < 9.99:
+            isClickBait = True
+        
+        if any( sol[i] > 50 for i in range(len(sol))) or not isClickBait:
+            verdict = "<br>The chances of this being a clickbait are low."
         else:
-            verdict = "The chances of this being a clickbait are low"
+            verdict = "<br>The chances of this being a clickbait are high."
         sol = [str(i)+ "%" for i in sol]
-        return ' '.join(sol) + " similarity\n" + verdict 
+        sol[0] = "Keywords: " + sol[0]
+        sol[1] = "Summary: " + sol[1]
+        print(articlePercent, nlpPercent)
+        return "<h3>Similarities-</h3>" + '<br>'.join(sol) + verdict 
     except:
         return "Summary not available for the current url"

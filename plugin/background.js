@@ -16,8 +16,11 @@ function hello() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
                     result = xhr.responseText;
-                    
-                    alert(result)
+                    //alert(result);
+                    document.getElementById('result').innerHTML = result;
+                    var temp = document.getElementById("body").clientHeight;
+                    if(temp < 300)
+                        document.body.style.height = temp + 150 + 'px';
                 }
             }
         };

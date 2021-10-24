@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <body style="width: 150px; height: 200px">
-    <style type="text/css">
-      #button {
-       padding: .5em;
-       -moz-border-radius: 5px;
-       -webkit-border-radius: 5px;
-       border-radius: 6px;
-       background-color: #0FF;
-       font-family: 'Oswald';
-       font-size: 15px;
-       text-decoration: none;
-       border: none;
-      }
-      #button:hover {
-       border: none;
-       background: orange;
-       box-shadow: 0px 0px 1px #777;
-      }
-      </style>
-    <div align="center">
-    <h3>Clickbait detector</h3>
-    <button id="button">Click here to know</button>
-    </div>
-    <script type="text/javascript" src="background.js"></script>
-  </body>
+
+<body id="body" style="width: 150px; height: 150px">
+	<style type="text/css">
+	#body {
+		background-color: #222626;
+		color: azure;
+		font-size: 15px;
+		border-width: 3px;
+		border-style: solid;
+		border-color: coral;
+		border-radius: 1px;
+		margin: 0px;
+	}
+	
+	#button {
+		padding: .5em;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 6px;
+		background: coral;
+		font-size: 15px;
+		text-decoration: none;
+		border: none;
+	}
+	
+	#button:hover {
+		border: none;
+		background-color: #0FF;
+		box-shadow: 0px 0px 1px #777;
+	}
+	
+	#result {
+		padding: 10px;
+		font-size: 15px
+	}
+	
+	#heading {
+		text-decoration: underline;
+		-webkit-text-decoration-color: coral;
+		/* safari still uses vendor prefix */
+		text-decoration-color: coral;
+	}
+	</style>
+	<div align="center">
+		<h4 id="heading">Clickbait detector</h4>
+		<button id="button">Click here to know</button>
+		<p align="left" id="result"></p>
+	</div>
+	<script type="text/javascript" src="background.js"></script>
+</body>
+
 </html>
