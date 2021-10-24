@@ -1,6 +1,6 @@
 chrome.browserAction.setIcon({
     path: {
-        128: "icon.png"
+        48: "icon_48.png"
     }
 });
 function hello() {
