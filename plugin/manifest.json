@@ -2,12 +2,12 @@
 {
     "manifest_version": 2,
   
-    "name": "The similarity of:",
-    "description": "Execute script after click",
+    "name": "Clickbait Detector",
+    "description": "Has access to this site",
     "version": "1.0",
   
     "icons": {
-      "128": "icon.png"
+      "48": "icon_48.png"
     },
   
     "permissions": [
@@ -15,7 +15,9 @@
     ],
   
     "browser_action": {
-      "default_icon": "icon.png",
+      "default_icon": {
+        "48": "icon_48.png"
+      },
       "default_popup": "popup.html"
     }
   }
