@@ -1,6 +1,7 @@
 import numpy as np 
 import pandas as pd
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 import string as s
@@ -89,5 +90,5 @@ f = open('my_classifier.pickle', 'rb')
 NB_MN = pickle.load(f)
 f.close()
 
-pred=NB_MN.predict(test_1)
+pred=NB_MN.predict(test_arr)
 print(pred)

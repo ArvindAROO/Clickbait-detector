@@ -95,7 +95,7 @@ NB_MN=MultinomialNB()
 
 NB_MN.fit(train_1,train_y)
 pred=NB_MN.predict(test_1)
-print(test_1)
+# print(test_1)
 print('first 20 actual labels: ',test_y.tolist()[:20])
 print('first 20 predicted labels: ',pred.tolist()[:20])
 
