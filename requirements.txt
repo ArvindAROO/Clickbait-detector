@@ -1,0 +1,4 @@
+gensim==3.8.3
+Flask==1.1.2
+newspaper3k==0.2.8
+nltk==3.5
