@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <body style="width: 50px">
-    <button id="clickme">Click Me</button>
+  <body style="width: 100px; height: 100px">
+    <style type="text/css">
+      #button {
+       padding: .5em;
+       -moz-border-radius: 5px;
+       -webkit-border-radius: 5px;
+       border-radius: 6px;
+       background-color: #0FF;
+       font-family: 'Oswald';
+       font-size: 15px;
+       text-decoration: none;
+       border: none;
+      }
+      #button:hover {
+       border: none;
+       background: orange;
+       box-shadow: 0px 0px 1px #777;
+      }
+      </style>
+    <h4>Clickbait detector</h4>
+    <button id="button" bgcolor="red">Click here to know</button>
     <script type="text/javascript" src="background.js"></script>
   </body>
 </html>
