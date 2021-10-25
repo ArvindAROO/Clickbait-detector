@@ -1,17 +1,9 @@
-chrome.browserAction.setIcon({
-    path: {
-        48: "icon_48.png"
-    }
-});
-function hello() {
-    chrome.tabs.query({
+function callAPI() {
+    chrome.tabs.query({ //get the url of the last focused window, ie the current tab
         active: true,
         lastFocusedWindow: true
     }, tabs => {
         let url = tabs[0].url;
-        // use `url` here inside the callback because it's asynchronous!
-
-        // alert('hello ' + url); 
         function callback() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
@@ -34,6 +26,6 @@ function hello() {
         xhr.send();
     });
     
-}
+  }
   
-document.getElementById('button').addEventListener('click', hello); // activate only on click
+  document.getElementById('button').addEventListener('click', callAPI); // activate only on click

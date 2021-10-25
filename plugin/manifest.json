@@ -7,7 +7,7 @@
     "version": "1.0",
   
     "icons": {
-      "48": "icon_48.png"
+      "48": "icon.png"
     },
   
     "permissions": [
@@ -16,7 +16,7 @@
   
     "browser_action": {
       "default_icon": {
-        "48": "icon_48.png"
+        "48": "icon.png"
       },
       "default_popup": "popup.html"
     }
