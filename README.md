@@ -5,7 +5,7 @@ An extension to detect if the articles content match its title.
 This was developed in a period of 24-hours in a hackathon called 'Hallothon'
 
 ## Working
-On click of the extension, the extension will call teh API (a basic flask app) which will scrape the contents of the website and use NLP to determine the similarity between the title and the content in the article and return the similarity as a percentage value back to the extension which will be displayed to the user
+On click of the extension, the extension will call the API (a basic flask app) which will scrape the contents of the website and use NLP to determine the similarity between the title and the content in the article and return the similarity as a percentage value back to the extension which will be displayed to the user
 
 Example:
 * The first image is an article whose title was exaggarated heavily and is caught too be having a high chance of being a clickbait
@@ -38,8 +38,8 @@ The extension must be ready to use and will return the values when clicked
 * [Arvind Krishna](https://github.com/ArvindAROO)
 * [Dhruva A Prasad](https://github.com/dhruva17)
 * [Jeevan Samrudh L H](https://github.com/JeevanSamrudh)
-* Tejas B
-* Vansidhar A
+* [Tejas B](https://github.com/TejasB02)
+* [Vansidhar A](https://github.com/vansidhar-a)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
