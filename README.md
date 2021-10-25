@@ -14,6 +14,8 @@ Example:
    <img src="images\clickbait_example.jpg" alt="clickbait" width = "150"/>
    <img src="images\not_clickbait_example.jpg" alt="clickbait" width = "155"/>
 </p>
+
+
 ## Usage instruction
 
 1. Download or clone the repo using the command 
